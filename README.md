@@ -12,8 +12,8 @@ conda create -n cpp_env -c conda-forge cxx-compiler gnuplot
 conda activate cpp_env
 ```
 
-## P0 - Eficiencia
+## P1 - Eficiencia
 
-La Práctica 0 consiste en aprender a analizar la eficiencia de un algoritmo. Se incluye un fichero "benchmark_bubblesort.cpp" que implementa el algoritmo de ordenación Bubble Sort y mide su tiempo de ejecución para diferentes tamaños de entrada. También se incluye un fichero "plot_results.sh" que utiliza gnuplot para visualizar los resultados obtenidos.
+La Práctica 1 consiste en aprender a analizar la eficiencia de un algoritmo. Se incluye un fichero "benchmark_bubblesort.cpp" que implementa el algoritmo de ordenación Bubble Sort y mide su tiempo de ejecución para diferentes tamaños de entrada. También se incluye un fichero "plot_results.sh" que utiliza gnuplot para visualizar los resultados obtenidos.
 
 

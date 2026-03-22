@@ -39,19 +39,23 @@ int main() {
     std::cout << "Running Benchmark and saving to " << filename << "..." << std::endl;
 
     for (int n = 500; n <= 20000; n += 500) {
-        std::vector<int> data(n);
-        for(int& x : data) x = distrib(gen);
 
-        auto start = std::chrono::high_resolution_clock::now();
-        
-        bubbleSort(data);
-        
-        auto end = std::chrono::high_resolution_clock::now();
-        std::chrono::duration<double> elapsed = end - start;
+        for (int trial = 0; trial < 3; trial++) {
 
-        outfile << n << " " << std::fixed << std::setprecision(6) << elapsed.count() << "\n";
-        
-        std::cout << "N=" << n << " took " << elapsed.count() << "s" << std::endl;
+            std::vector<int> data(n);
+            for(int& x : data) x = distrib(gen);
+
+            auto start = std::chrono::high_resolution_clock::now();
+            
+            bubbleSort(data);
+            
+            auto end = std::chrono::high_resolution_clock::now();
+            std::chrono::duration<double> elapsed = end - start;
+
+            outfile << n << " " << std::fixed << std::setprecision(6) << elapsed.count() << "\n";
+            
+            std::cout << "N=" << n << " took " << elapsed.count() << "s" << std::endl;
+        }
     }
 
     outfile.close();
