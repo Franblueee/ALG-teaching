@@ -14,7 +14,7 @@ pair<vector<int>, int> heuristic_nearest_neighbor(const vector<vector<int>>& dis
      * Return: A pair containing the tour (vector of node indices) and the total tour cost.
      */
     vector<int> tour;
-    int total_cost = 0;
+    int total_cost = -1;
 
     return {tour, total_cost};
 }
@@ -27,7 +27,9 @@ int main(int argc, char* argv[]) {
     }
 
     string file_path = argv[1];
-    vector<Node> nodes = parse_tsplib_file(file_path);
+    pair<vector<Node>, vector<int>> parsed_data = parse_tsplib_file(file_path);
+    vector<Node> nodes = parsed_data.first;
+    vector<int> optimal_tour = parsed_data.second;
 
     if (nodes.empty()) {
         cout << "No nodes loaded. Please check the file path and format." << endl;
@@ -36,6 +38,13 @@ int main(int argc, char* argv[]) {
 
     vector<vector<int>> dist_matrix = build_distance_matrix(nodes);
     cout << "Successfully loaded " << dist_matrix.size() << " nodes." << endl;
+
+    if (!optimal_tour.empty()) {
+        int optimal_cost = compute_tour_cost(optimal_tour, dist_matrix);
+        cout << "Optimal Tour Cost from file: " << optimal_cost << endl;
+    } else {
+        cout << "No optimal tour found in input file." << endl;
+    }
 
     pair<vector<int>, int> nn_result = heuristic_nearest_neighbor(dist_matrix);
     cout << "Nearest Neighbor Cost: " << nn_result.second << endl;

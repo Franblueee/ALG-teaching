@@ -10,7 +10,8 @@ struct Node {
     double y;
 };
 
-std::vector<Node> parse_tsplib_file(const std::string& filepath);
+std::pair<std::vector<Node>, std::vector<int>> parse_tsplib_file(const std::string& filepath);
 std::vector<std::vector<int>> build_distance_matrix(const std::vector<Node>& nodes);
+int compute_tour_cost(const std::vector<int>& tour, const std::vector<std::vector<int>>& distance_matrix);
 
 #endif
