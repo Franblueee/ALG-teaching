@@ -23,7 +23,7 @@ pair<vector<int>, int> heuristic_nearest_insertion(
 }
 
 int main(int argc, char* argv[]) {
-    // g++ nearest_insertion.cpp data_loader.cpp plot_tour.cpp -o nearest_insertion.bin -O3 && ./nearest_insertion.bin ./data/berlin52.tsp
+    // g++ nearest_insertion.cpp data_loader.cpp plot_tour.cpp -o nearest_insertion.bin && ./nearest_insertion.bin ./data/berlin52.tsp
     if (argc < 2) {
         cout << "Usage: " << argv[0] << " <path_to_tsp_file>" << endl;
         return 1;

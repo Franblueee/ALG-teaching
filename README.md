@@ -5,8 +5,8 @@ En este repositorio se encuentran algunos materiales para las prácticas de la a
 Se recomienda crear un entorno de Anaconda para instalar las dependencias necesarias para compilar y ejecutar el código. A continuación se muestran los comandos necesarios para crear un entorno con el compilador de C++ y gnuplot para visualizar los resultados.
 
 ```bash
-# Create a new environment named 'cpp_env' and install the compiler and gnuplot
-conda create -n cpp_env -c conda-forge cxx-compiler gnuplot
+# Create a new environment named 'cpp_env' and install the compiler, gnuplot, and graphviz
+conda create -n cpp_env -c conda-forge cxx-compiler gnuplot graphviz
 
 # Activate the environment
 conda activate cpp_env

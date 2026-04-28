@@ -21,7 +21,7 @@ pair<vector<int>, int> heuristic_nearest_neighbor(const vector<vector<int>>& dis
 }
 
 int main(int argc, char* argv[]) {
-    // g++ nearest_neighbor.cpp data_loader.cpp plot_tour.cpp -o nearest_neighbor.bin -O3 && ./nearest_neighbor.bin ./data/berlin52.tsp
+    // g++ nearest_neighbor.cpp data_loader.cpp plot_tour.cpp -o nearest_neighbor.bin && ./nearest_neighbor.bin ./data/berlin52.tsp
     if (argc < 2) {
         cout << "Usage: " << argv[0] << " <path_to_tsp_file>" << endl;
         return 1;

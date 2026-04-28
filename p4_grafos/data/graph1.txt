@@ -1,0 +1,29 @@
+# Graph coloring instance
+# Format:
+#   GRAPH_SECTION
+#   number_of_vertices number_of_edges
+#   node_0 node_1
+#   node_0 node_2
+#   ...
+#   COLORING_SECTION
+#   max_colors
+#   node_0 color_0
+#   node_1 color_1
+#   ...
+
+GRAPH_SECTION
+6 7
+0 1
+0 2
+1 2
+1 3
+2 4
+3 4
+4 5
+COLORING_SECTION
+0 0
+1 1
+2 2
+3 2
+4 1
+5 2

@@ -44,3 +44,6 @@
 *.dat
 *.log
 *.png
+*.dot
+
+*.zip
