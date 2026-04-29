@@ -19,7 +19,7 @@ Instrucciones de compilación: g++ -std=c++17 main.cpp graph_coloring.cpp -o gra
  */
 int main(int argc, char* argv[]) {
     if (argc < 2) {
-        cout << "Usage: " << argv[0] << " <graph_file> [max_colors_for_backtracking]" << endl;
+        cout << "Usage: " << argv[0] << " <graph_file> <max_colors_for_backtracking>" << endl;
         cout << "Example: " << argv[0] << " data/graph1.txt 3" << endl;
         cout << "Optional: --plot [--plot-dir output_dir]" << endl;
         return 0;

@@ -1,0 +1,21 @@
+(cpp_env) [fran@dodona tsp]$ ./main.bin data/example8.tsp --all
+Successfully loaded 8 nodes.
+Optimal Tour Cost from file: 232
+Saved optimal tour visualization to plots/example8_optimal_tour.png
+Nearest Neighbor Cost: 258
+Nearest Neighbor Tour: 0 -> 4 -> 1 -> 3 -> 6 -> 2 -> 7 -> 5 -> 0
+Saved nearest-neighbor tour visualization to plots/example8_nearest_neighbor_tour.png
+[BnB simple] Starting search with initial upper bound: 258
+[BnB simple] New best cost: 240 (nodes generated: 13, pruned: 0)
+[BnB simple] New best cost: 232 (nodes generated: 884, pruned: 401)
+[BnB simple] Finished. Generated: 4675, pruned: 2371, best: 232
+Branch and Bound (simple bound) Cost: 232
+BnB Simple Tour: 0 -> 1 -> 4 -> 3 -> 6 -> 5 -> 7 -> 2 -> 0
+Saved BnB simple tour visualization to plots/example8_bnb_simple_tour.png
+[BnB MST] Starting search with initial upper bound: 258
+[BnB MST] New best cost: 240 (nodes generated: 11, pruned: 2)
+[BnB MST] New best cost: 232 (nodes generated: 55, pruned: 34)
+[BnB MST] Finished. Generated: 139, pruned: 103, best: 232
+Branch and Bound (MST bound) Cost: 232
+BnB MST Tour: 0 -> 1 -> 4 -> 3 -> 6 -> 5 -> 7 -> 2 -> 0
+Saved BnB MST tour visualization to plots/example8_bnb_mst_tour.png

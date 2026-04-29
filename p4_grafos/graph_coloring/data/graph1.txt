@@ -6,7 +6,6 @@
 #   node_0 node_2
 #   ...
 #   COLORING_SECTION
-#   max_colors
 #   node_0 color_0
 #   node_1 color_1
 #   ...
